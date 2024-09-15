@@ -1,0 +1,271 @@
+/*                    LOGIN PAGE                 */
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.form-toggle {
+    margin-bottom: 20px;
+}
+
+.form-toggle a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.form-toggle .active {
+    color: #d9534f;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.form a {
+    color: #007bff;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+}
+
+.options label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-btn, .register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+}
+
+.list {
+    list-style: none;
+    margin-top: 30px;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.contactlist {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    margin: 7px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contactlist i {
+    line-height: 40px;
+    font-size: x-large;
+    transition: 0.2s linear;
+    color: rgb(0, 183, 255);
+}
+
+.contactlist:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.contactlist::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgb(0, 183, 255);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.contactlist:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+
+.fingerprint-login {
+    margin-top: -50px;
+}
+
+.fingerprint-icon {
+    font-size: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 600px (mobile devices) */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .input-field input {
+        padding: 8px;
+    }
+
+    .login-btn, .register-btn {
+        padding: 8px;
+    }
+
+    .social-login p {
+        font-size: 14px;
+    }
+
+    .form-toggle a {
+        font-size: 14px;
+    }
+
+    .contactlist {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contactlist i {
+        font-size: large;
+    }
+
+    .fingerprint-icon {
+        font-size: 30px;
+    }
+}
+
+/* For tablets (screens between 600px and 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .container {
+        width: 400px;
+    }
+
+    .input-field input {
+        padding: 10px;
+    }
+
+    .login-btn, .register-btn {
+        padding: 10px;
+    }
+
+    .social-login p {
+        font-size: 16px;
+    }
+}
+
+/* For large screens (desktops and large tablets) */
+@media (min-width: 992px) {
+    .container {
+        width: 450px;
+    }
+
+    .input-field input {
+        padding: 12px;
+    }
+
+    .login-btn, .register-btn {
+        padding: 12px;
+    }
+
+    .social-login p {
+        font-size: 18px;
+    }
+}

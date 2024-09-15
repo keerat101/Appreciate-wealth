@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(27.45deg, rgba(71, 255, 211, 0.6) 0%, rgba(200, 74, 211, 0.6) 89.93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 350px; /* Approximate width of a mobile device */
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header h1 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #D02E9F; /* Matching the theme color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about-button:hover {
+    background-color: #B02881;
+}
+
+/* Responsive Design */
+
+/* For small screens (up to 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* More flexible for small screens */
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .about-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* For medium screens (600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .container {
+        max-width: 450px; /* Increase width for tablet devices */
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .about-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* For large screens (above 992px) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 500px;
+        padding: 25px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+
+    .about-button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ page</title>
+    <link rel="stylesheet" href="faq_page.css">
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <!-- Question 1 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>What is Fruit.Ai?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Fruit.Ai is an AI-powered assistant that helps you discover new fruits, understand their nutritional values, and make personalized recommendations based on your dietary needs.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>How does Fruit.Ai personalize fruit recommendations?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Fruit.Ai uses AI algorithms to analyze your health data, preferences, and goals to suggest fruits that best match your nutritional and wellness needs.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>Is Fruit.Ai free to use?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Yes, Fruit.Ai offers a free version with all the essential features. There is also a premium version that offers additional insights and advanced recommendations.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>What platforms is Fruit.Ai available on?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Fruit.Ai is available on both web and mobile platforms, including iOS and Android apps.</p>
+            </div>
+        </div>
+
+        <!-- Added Question 5 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>How does Fruit.Ai handle my personal data?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Your privacy is our top priority. We ensure that all health-related and personal data is encrypted and stored securely. Fruit.Ai only uses your data to provide personalized recommendations and will never share it with third parties without your consent.</p>
+            </div>
+        </div>
+
+        <!-- Added Question 6 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>Can I track my daily fruit intake with Fruit.Ai?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>Yes, Fruit.Ai has a built-in feature to help you log and track your daily fruit consumption, offering reminders and suggestions to meet your daily nutritional goals.</p>
+            </div>
+        </div>
+
+        <!-- Added Question 7 -->
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h2>Can I suggest new features for Fruit.Ai?</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+                <p>We welcome user feedback! You can suggest new features or improvements directly through the app or by contacting our support team.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                answer.style.display = "block";
+                icon.textContent = "-";
+            }
+        }
+    </script>
+</body>
+</html>

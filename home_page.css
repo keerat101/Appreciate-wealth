@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #E0BCF3 0%, #7EE7EE 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+.container {
+    text-align: center;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37.92px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.box {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+    transition: transform 0.3s ease;
+}
+
+.chat {
+    text-decoration: none;
+    background: #FFE5C2;
+    color: hsl(318, 64%, 50%);
+    font-size: 50px;
+}
+
+.translate {
+    background-color: #CCEEFF;
+}
+
+.translate img {
+    width: 60px;
+    height: 60px;
+}
+.translate i {
+    color: #2a26f3;
+    font-size: 100px;
+}
+
+.faqs {
+    text-decoration: none;
+    background-color: #dec2ff;
+    color: #364A69;
+    font-size: 45px;
+}
+
+.about {
+    text-decoration: none;
+    background-color: #F2B3D2;
+    color: #D02E9F;
+    font-size: 40px;
+}
+
+.hid {
+    text-decoration: none;
+    background-color: #C2FFD0;
+    filter: blur(3px);
+}
+
+.box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+
+/* For mobile screens (up to 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 15px;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        font-size: 1.2rem;
+    }
+
+    .chat, .faqs, .about {
+        font-size: 40px;
+    }
+
+    .translate i {
+        font-size: 70px;
+    }
+}
+
+/* For tablets (600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .tagline {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+        gap: 20px;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        font-size: 1.3rem;
+    }
+
+    .chat, .faqs, .about {
+        font-size: 45px;
+    }
+
+    .translate i {
+        font-size: 90px;
+    }
+}
+
+/* For large screens (desktops and large tablets) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .tagline {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+        gap: 20px;
+    }
+
+    .box {
+        width: 140px;
+        height: 140px;
+        font-size: 1.5rem;
+    }
+
+    .chat, .faqs, .about {
+        font-size: 50px;
+    }
+
+    .translate i {
+        font-size: 100px;
+    }
+}
